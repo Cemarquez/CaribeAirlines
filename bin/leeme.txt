@@ -1,0 +1,25 @@
+Se realizó todo. 
+
+Integrantes: César Esteban Márquez - Brian David Giraldo
+
+
+###############################
+Información importante.
+###############################
+El proyecto crea una carpeta llamada CaribeAirlines en el disco principal del sistema y allí almacenará todos los datos en dos 
+carpertas distintas, una llamada Facturas que contiene las facturas en PDF y otra llamada Datos que contiene la aerolinea serializada.
+Cuenta con una pestaña para administradores y otra para clientes, en la pestaña de administradores se podrá visualizar los requisitos funcionales
+propuestos en el enunciado del proyecto, y en el de clientes se podrá comprar los vuelos, visualizar facturas, y cancelar reservas.
+
+##############################
+Correo electrónico de pruebas
+##############################
+Correo: pruebaairlines@outlook.es
+contraseña: prueba.1234
+Con estos mismos datos podrá ingresar al proyecto y correo electrónico.
+
+#############################
+Administrador
+#############################
+Usuario: admin
+contraseña: admin
