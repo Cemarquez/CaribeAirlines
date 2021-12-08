@@ -23,7 +23,6 @@ import com.toedter.calendar.JMonthChooser;
 import com.toedter.calendar.JYearChooser;
 import com.uniquindio.Fundamentos.Interfaces.VentanaFuncionesCliente;
 import com.uniquindio.Fundamentos.Interfaces.VentanaPrincipal;
-import com.uniquindio.Fundamentos.MailSender.MailSender;
 import com.uniquindio.Fundamentos.Mundo.Avion;
 import com.uniquindio.Fundamentos.Mundo.Cliente;
 import com.uniquindio.Fundamentos.Mundo.Consolidado;
@@ -249,9 +248,6 @@ public class VentanaTarjetaCreditoReserva extends JFrame implements ActionListen
 			miVentanaPrincipal.añadirTiquete(pTiquete);
 			String ruta = Util.disco() + "CaribeAirlines/Facturas/Factura_" + miCliente.getNombre() +"_" + factura.getNumeroFactura() +  ".pdf";
 			String nombreFile = "Factura_" + miCliente.getNombre() +"_" + factura.getNumeroFactura() +  ".pdf";
-			MailSender mail = new MailSender();
-			miVentanaPrincipal.setMail(mail);
-			miVentanaPrincipal.enviarCorreoCompra(miCliente.getCorreo(), ruta, nombreFile); 
 			vuelo.setRealizado(true);
 			miVentanaPrincipal.serializar();
 			miVFC.setVisible(true);

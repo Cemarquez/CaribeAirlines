@@ -24,7 +24,6 @@ import com.toedter.calendar.JMonthChooser;
 import com.toedter.calendar.JYearChooser;
 import com.uniquindio.Fundamentos.Interfaces.Regreso.VentanaResultadosBusquedaRegreso;
 import com.uniquindio.Fundamentos.Interfaces.Reservas.VentanaReservas;
-import com.uniquindio.Fundamentos.MailSender.MailSender;
 import com.uniquindio.Fundamentos.Mundo.Avion;
 import com.uniquindio.Fundamentos.Mundo.Cliente;
 import com.uniquindio.Fundamentos.Mundo.Consolidado;
@@ -249,9 +248,6 @@ public class VentanaTarjetaCredito extends JFrame implements ActionListener {
 			vuelo.setRealizado(true);
 			String ruta = Util.disco() + "CaribeAirlines/Facturas/Factura_" + miCliente.getNombre() +"_" + factura.getNumeroFactura() +  ".pdf";
 			String nombreFile = "Factura_" + miCliente.getNombre() +"_" + factura.getNumeroFactura() +  ".pdf";
-			MailSender mail = new MailSender();
-			miVentanaPrincipal.setMail(mail);
-			miVentanaPrincipal.enviarCorreoCompra(miCliente.getCorreo(), ruta, nombreFile); 
 			if(modalidad.equals("ida y regreso"))
 			{
 				JOptionPane.showMessageDialog(null, "A continuación pasará a escoger el vuelo de regreso", "Confirmación", JOptionPane.INFORMATION_MESSAGE);

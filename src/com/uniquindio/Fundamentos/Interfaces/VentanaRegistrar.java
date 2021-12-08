@@ -26,7 +26,6 @@ import javax.swing.border.EmptyBorder;
 
 import com.toedter.calendar.JDateChooser;
 import com.uniquindio.Fundamentos.Interfaces.Reservas.VentanaReservas;
-import com.uniquindio.Fundamentos.MailSender.MailSender;
 import com.uniquindio.Fundamentos.Mundo.Cliente;
 
 @SuppressWarnings("serial")
@@ -296,9 +295,6 @@ public class VentanaRegistrar extends JFrame implements ActionListener {
 								JOptionPane.WARNING_MESSAGE);
 					} else {
 						String datos = nombre + " " + apellido + "\n" +"Correo: "+ correo + "\n" + "Contraseña: " + contraseña;
-						MailSender mail = new MailSender();
-						miVentanaPrincipal.setMail(mail);
-						miVentanaPrincipal.enviarCorreoBienvenida(correo, datos);
 						Cliente miCliente = new Cliente(nombre, apellido, correo, direccion, contraseña, cedula,
 								fechaNacimiento);
 						miVentanaPrincipal.agregarCliente(miCliente);

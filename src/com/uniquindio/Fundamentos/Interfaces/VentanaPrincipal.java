@@ -25,7 +25,6 @@ import java.awt.Font;
 import javax.swing.border.LineBorder;
 
 import com.uniquindio.Fundamentos.Interfaces.Reservas.VentanaReservas;
-import com.uniquindio.Fundamentos.MailSender.MailSender;
 import com.uniquindio.Fundamentos.Miscelanea.GeneradorPDF;
 import com.uniquindio.Fundamentos.Mundo.Aerolinea;
 import com.uniquindio.Fundamentos.Mundo.Cliente;
@@ -523,25 +522,6 @@ public class VentanaPrincipal extends JFrame implements ActionListener
 		generadorPDF.crearPDF(factura, precioBoletos, precioEquipaje, kilosAdicionales);
 	}
 	
-	public void mailSender()
-	{
-		aerolinea.mailSender();
-	}
-	
-	public void enviarCorreoBienvenida(String destinatario, String datos) 
-	{
-		aerolinea.enviarCorreoBienvenida(destinatario, datos);
-	}
-	
-	public void enviarCorreoCompra(String remitente, String ruta, String nombreFile)
-	{
-		aerolinea.enviarCorreoCompra(remitente, ruta, nombreFile);
-	}
-	
-	public void setMail(MailSender mail)
-	{
-		aerolinea.setMail(mail);
-	}
 	/**
 	 * Método que permite obtener la lista de trayectos de la aerolinea.
 	 * @return

@@ -8,7 +8,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 
-import com.uniquindio.Fundamentos.MailSender.MailSender;
 import com.uniquindio.Fundamentos.Mundo.Tripulante.Estudios;
 import com.uniquindio.Fundamentos.Mundo.Vuelo.Tipo;
 import com.uniquindio.Fundamentos.Util.Util;
@@ -35,7 +34,6 @@ public class Aerolinea implements Serializable {
 	private ArrayList<Consolidado> dineroRecaudado;
 	private ArrayList<Tiquete> tiquetesAerolinea;
 	private ArrayList<Factura> facturasAerolinea;
-	private  MailSender mail;
 
 	/**
 	 * Constructor de la aerolinea.
@@ -55,25 +53,7 @@ public class Aerolinea implements Serializable {
 		tiquetesAerolinea = new ArrayList<Tiquete>();
 	}
 	
-	public void mailSender()
-	{
-		mail = new MailSender();
-	}
-	
-	public void enviarCorreoBienvenida(String destinatario, String datos) 
-	{
-		mail.enviarCorreoBienvenida(destinatario, datos);
-	}
-	
-	public void enviarCorreoCompra(String remitente, String ruta, String nombreFile)
-	{
-		mail.enviarCorreoCompra(remitente, ruta, nombreFile);
-	}
-	
-	public void setMail(MailSender mail)
-	{
-		this.mail = mail;
-	}
+
     
 	/**
 	 * Método que añade una factura al ArrayList de facturas presente en esta clase.
